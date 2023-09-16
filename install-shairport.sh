@@ -39,7 +39,7 @@ rm -rf nqptp
 # Shairport Sync
 git clone https://github.com/mikebrady/shairport-sync.git
 cd shairport-sync
-git checkout ${SHAIRPORT_VERSION}
+git checkout $SHAIRPORT_VERSION
 autoreconf -fi
 ./configure --sysconfdir=/etc --with-alsa --with-pa --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-airplay-2 --with-apple-alac
 make -j $(nproc)
